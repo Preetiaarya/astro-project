@@ -1,22 +1,25 @@
+---
+//frontmatter
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Index</title>
 	</head>
 	<body>
+		<nav>
+			<a href="">Home</a>
+			<a href="">About</a>
+			<a href="">Contact</a>
+		</nav>
 		<slot />
+		<footer>
+			<p>Quick Links</p>
+			<p>Social Media Links</p>
+			<p>Contact Details</p>
+		</footer>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
