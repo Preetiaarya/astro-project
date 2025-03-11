@@ -1,27 +1,98 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "About Me";
+
+const identity = {
+    firstName: "Preeti",
+    lastName: "Aarya",
+    country: "India",
+    occupation: "Frontend Developer",
+    hobbies: ["readingNobel", "writring", "sketching"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "p5"];
 ---
 
 <Layout>
+    <div class="about">
     <!-- <a href="/">Home</a>
     <a href="/about/">About</a> -->
 
-    <img src="astro-img.jpeg" alt="astro-img" />
+    <img src="/images/astro-img.jpeg" alt="astro-img" />
     <h1>About Us :</h1>
     <h2>Wecome!</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit laborum blanditiis dignissimos ad, dolorum possimus accusamus. Adipisci culpa qui quo, odio quibusdam nobis reiciendis atque voluptatum harum deleniti. Possimus, reprehenderit.
-    Quae praesentium debitis sapiente eaque ipsam? Nobis illo maiores, dolorum deserunt porro debitis doloremque eius culpa quis totam, esse, corporis commodi ullam rem quia. Repudiandae illum consectetur dolorum? Eaque, ullam.
-    Aperiam, quae. Repellendus doloribus nihil quibusdam suscipit fugiat eveniet eaque eos excepturi delectus voluptatem animi vero aperiam accusantium, ipsam ducimus nostrum neque incidunt at atque natus. Aperiam suscipit quasi quia?
-    Quibusdam dolores labore quidem voluptatem, adipisci facere doloremque quos facilis qui quisquam alias optio ex, pariatur eius sequi aspernatur, vitae odio minima quod rerum? Provident nihil aliquid incidunt officia accusantium!
-    Excepturi, debitis est commodi quod explicabo fugiat? Vero perspiciatis ipsum, maiores consequuntur, fuga amet voluptas culpa, nobis ea veniam aliquam unde magnam porro expedita ad neque repudiandae molestias impedit. Iure!
-    Quam unde dolores cupiditate quidem accusamus, itaque porro ad repellat architecto eius voluptatibus amet consectetur facere et sint distinctio corrupti ab praesentium qui eos rem sapiente numquam repellendus! Saepe, laborum?
-    Vitae qui, veritatis odio ea illo modi consectetur laboriosam officiis optio, odit magni error voluptatum dignissimos voluptatem asperiores mollitia maxime vel nisi. Rem nihil omnis reiciendis soluta veniam sapiente laboriosam.
-    Dolores autem a nulla possimus in nihil ea cum repellat eaque, laudantium maiores sapiente. Pariatur voluptatem repellendus asperiores praesentium. Sit, consequuntur sunt. Eligendi ducimus fuga labore suscipit rem! Voluptas, dolores!
-    A nam sapiente corrupti officia vel ex esse adipisci aut odit iure natus modi libero quas molestias in suscipit assumenda maiores fugit excepturi alias nemo dolorem, eius aliquam fugiat. Quod.
-    Similique quibusdam illo facere accusantium temporibus enim iure provident, magnam modi repellat expedita rem tenetur corporis, sint consequatur! Provident aliquid eos omnis aspernatur sunt voluptatum nulla maiores totam. Culpa, quibusdam!
-    Voluptatem voluptas provident sit totam dolores soluta itaque, incidunt sint voluptate possimus! Fugiat id aliquam cumque eveniet reprehenderit voluptatum, illo labore, possimus ipsum nam atque sint optio amet hic eaque?
-    Odio, voluptas adipisci consectetur deserunt tempora nesciunt voluptates aliquam placeat. Dolore iure aperiam facilis accusamus neque doloribus voluptatibus quod veniam provident dolorum ducimus in, cupiditate vero fugit deleniti officia. Consectetur.
-    Unde temporibus nihil quidem, dolor atque laborum placeat veniam voluptates earum reprehenderit magni at sunt minima nulla asperiores itaque explicabo, ex tempore tempora pariatur ut voluptas iure! A, reprehenderit velit!
-    Aut magnam esse ab veritatis doloremque cupiditate, obcaecati quae fugit consequuntur rem quasi provident neque quam incidunt. Distinctio perspiciatis amet doloremque, incidunt nostrum, quae nihil doloribus veniam nesciunt reiciendis illum.
-    Dolor temporibus accusamus possimus quos debitis! Sed voluptatibus ut quibusdam voluptatum asperiores, neque autem architecto illo rerum harum commodi beatae a amet soluta minima cum quam sequi optio quo non!</p>
+
+    <p>Here are a few facts about me:</p>
+    <ul>
+        <li>My name is {identity.firstName}{identity.lastName}.</li>
+        <li>
+            I live in {identity.country} and I work as a {identity.occupation}.
+        </li>
+        {
+            identity.hobbies.length >= 2 && (
+                <li>
+                    Two of my hobbies are: {identity.hobbies[0]} and{" "}
+                    {identity.hobbies[1]}
+                </li>
+            )
+        }
+    </ul>
+    <p>My skills are:</p>
+    <ul>
+        {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit laborum
+        blanditiis dignissimos ad, dolorum possimus accusamus. Adipisci culpa
+        qui quo, odio quibusdam nobis reiciendis atque voluptatum harum
+        deleniti. Possimus, reprehenderit. Quae praesentium debitis sapiente
+        eaque ipsam? Nobis illo maiores, dolorum deserunt porro debitis
+        doloremque eius culpa quis totam, esse, corporis commodi ullam rem quia.
+        Repudiandae illum consectetur dolorum? Eaque, ullam. Aperiam, quae.
+        Repellendus doloribus nihil quibusdam suscipit fugiat eveniet eaque eos
+        excepturi delectus voluptatem animi vero aperiam accusantium, ipsam
+        ducimus nostrum neque incidunt at atque natus. Aperiam suscipit quasi
+        quia? Quibusdam dolores labore quidem voluptatem, adipisci facere
+        doloremque quos facilis qui quisquam alias optio ex, pariatur eius sequi
+        aspernatur, vitae odio minima quod rerum? Provident nihil aliquid
+        incidunt officia accusantium! Excepturi, debitis est commodi quod
+        explicabo fugiat? Vero perspiciatis ipsum, maiores consequuntur, fuga
+        amet voluptas culpa, nobis ea veniam aliquam unde magnam porro expedita
+        ad neque repudiandae molestias impedit. Iure! Quam unde dolores
+        cupiditate quidem accusamus, itaque porro ad repellat architecto eius
+        voluptatibus amet consectetur facere et sint distinctio corrupti ab
+        praesentium qui eos rem sapiente numquam repellendus! Saepe, laborum?
+        Vitae qui, veritatis odio ea illo modi consectetur laboriosam officiis
+        optio, odit magni error voluptatum dignissimos voluptatem asperiores
+        mollitia maxime vel nisi. Rem nihil omnis reiciendis soluta veniam
+        sapiente laboriosam. Dolores autem a nulla possimus in nihil ea cum
+        repellat eaque, laudantium maiores sapiente. Pariatur voluptatem
+        repellendus asperiores praesentium. Sit, consequuntur sunt. Eligendi
+        ducimus fuga labore suscipit rem! Voluptas, dolores! A nam sapiente
+        corrupti officia vel ex esse adipisci aut odit iure natus modi libero
+        quas molestias in suscipit assumenda maiores fugit excepturi alias nemo
+        dolorem, eius aliquam fugiat. Quod. Similique quibusdam illo facere
+        accusantium temporibus enim iure provident, magnam modi repellat
+        expedita rem tenetur corporis, sint consequatur! Provident aliquid eos
+        omnis aspernatur sunt voluptatum nulla maiores totam. Culpa, quibusdam!
+        Voluptatem voluptas provident sit totam dolores soluta itaque, incidunt
+        sint voluptate possimus! Fugiat id aliquam cumque eveniet reprehenderit
+        voluptatum, illo labore, possimus ipsum nam atque sint optio amet hic
+        eaque? Odio, voluptas adipisci consectetur deserunt tempora nesciunt
+        voluptates aliquam placeat. Dolore iure aperiam facilis accusamus neque
+        doloribus voluptatibus quod veniam provident dolorum ducimus in,
+        cupiditate vero fugit deleniti officia. Consectetur. Unde temporibus
+        nihil quidem, dolor atque laborum placeat veniam voluptates earum
+        reprehenderit magni at sunt minima nulla asperiores itaque explicabo, ex
+        tempore tempora pariatur ut voluptas iure! A, reprehenderit velit! Aut
+        magnam esse ab veritatis doloremque cupiditate, obcaecati quae fugit
+        consequuntur rem quasi provident neque quam incidunt. Distinctio
+        perspiciatis amet doloremque, incidunt nostrum, quae nihil doloribus
+        veniam nesciunt reiciendis illum. Dolor temporibus accusamus possimus
+        quos debitis! Sed voluptatibus ut quibusdam voluptatum asperiores, neque
+        autem architecto illo rerum harum commodi beatae a amet soluta minima
+        cum quam sequi optio quo non!
+    </p>
+</div>
 </Layout>
