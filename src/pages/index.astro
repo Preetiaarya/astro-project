@@ -1,30 +1,27 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import '../Style/index.css'
+import "../Style/index.css";
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-const interests = ["watching movie","sketches","reading novel"];
+const interests = ["watching movie", "sketches", "reading novel"];
 ---
 
 <Layout>
-    <!-- <div>
-        <img src="astro-img.jpeg" alt="astro-img" />
-        <h1>Astro Index Page</h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-            provident inventore impedit quam incidunt doloremque totam
-            praesentium vel id fugit nulla est perspiciatis, commodi veritatis
-            corporis. Facilis culpa porro doloribus?
-        </p>
-        <button>See More</button>
-    </div> -->
-    <h1>My skills are:</h1>
-<ul>
-  {skills.map((skill) => <li>{skill}</li>)}
-</ul>
-<h2>My Interest are:</h2>
+    <!-- <a href="/">Home</a> -->
+
+    <h1>Astro Index Page</h1>
+    <h2>My skills are:</h2>
+    <ul>
+        {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
+    <h2>My Interest are:</h2>
     <ul>
         <!-- interests.(interest) -->
         {interests.map((interest) => <li>{interest}</li>)}
     </ul>
-
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
+        vero quia suscipit vitae voluptates reiciendis doloribus porro amet,
+        deserunt voluptatum ad excepturi, nihil hic praesentium harum
+        repellendus expedita sunt perspiciatis!
+    </p>
 </Layout>
