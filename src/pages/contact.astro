@@ -1,19 +1,33 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "Contact Details";
 ---
 
 <Layout>
-    <!-- <a href="/">home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <a href="/contact/">Contact</a> -->
-
+    <div class="contact">
     <img src="/images/ima-2.jpeg" alt="astro-img" />
-    <h1>Contact :</h1>
+    <h1>{pageTitle}</h1>
     <h2>Wecome!</h2>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex adipisci
         placeat tempora iusto soluta ea eos praesentium temporibus enim nemo! Ex
         voluptatum repudiandae, culpa ullam delectus nulla iste ipsum atque!
     </p>
+</div>
 </Layout>
+<style>
+    .contact{
+        background-color: rgba(2, 223, 223, 0.139);
+    }
+    h1 {
+      color: purple;
+      font-size: 4rem;
+    }
+    img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+    }
+  </style>
+

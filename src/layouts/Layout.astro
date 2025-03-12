@@ -1,4 +1,10 @@
 ---
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import Logo from "../components/Logo.astro";
+
+// <title>{pageTitle}</title>
+
 //frontmatter
 ---
 
@@ -7,31 +13,17 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Index</title>
-		<style>
-			.about{
-				background-color: aquamarine;
-			}
-		</style>
+		<!-- <title>{pageTitle}</title> -->
+		
 		
 	</head>
 	<body>
-		<nav>
-			<div><img src="/images/astro-logo.png" alt="" /></div>
-			<div>
-				<a href="/">Home</a>
-				<a href="/about/">About</a>
-				<a href="/blog/">Blog</a>
-				<a href="/contact/">Contact</a>
-			</div>
-		</nav>
+		<Logo />
+		<Navigation />
+		<!-- <h1>{pageTitle}</h1> -->
 		<slot />
-		<footer>
-			<p>Quick Links</p>
-			<p>Contact Details</p>
-			<p>
-				<img src="/images/logos.png" alt="logos">
-			</p>
-		</footer>
+		
+		<Footer/>
+
 	</body>
 </html>

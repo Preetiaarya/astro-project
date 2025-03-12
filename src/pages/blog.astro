@@ -1,14 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "Blog";
+
 ---
 
 <Layout>
-    <!-- <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a> -->
+    <div class="blog">
 
     <img src="/images/img-1.jpeg" alt="astro-img" />
-    <h1>Blog :</h1>
+    <h1>{pageTitle}</h1>
     <h2>Wecome!</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, rerum quam corporis nemo, eveniet modi quis est rem dicta fugiat, perferendis nulla veritatis! Doloribus itaque ea, molestiae aspernatur eaque accusamus!
     Consectetur temporibus, sed exercitationem sequi possimus minus ex? Soluta pariatur saepe recusandae tempore adipisci corrupti ad possimus et repellendus, eos nobis deserunt aperiam, labore minus ratione tenetur. Eos, minima sapiente?
@@ -20,4 +21,21 @@ import Layout from "../layouts/Layout.astro";
     Optio deleniti commodi reprehenderit voluptate magni fugit delectus itaque, atque deserunt neque quisquam veritatis quod? Dolores enim harum pariatur non corrupti iusto eveniet vel, id accusamus? Voluptatem ipsam laborum accusamus.
     Natus perferendis totam laudantium eveniet nisi officiis recusandae temporibus corporis illum consequuntur fugit est voluptatibus molestias impedit optio deserunt ipsum distinctio tempora sequi provident cumque, porro id atque assumenda. Iste!
     Soluta blanditiis harum tempore distinctio dicta illo eius ut nihil facere veniam, adipisci quas laborum eveniet tempora porro est quod. Non, voluptates? Doloribus repudiandae laborum officiis officia laboriosam nemo rerum?</p>
+</div>
 </Layout>
+<style>
+    .blog{
+        background-color: rgba(233, 150, 122, 0.37);
+    }
+    h1 {
+      color: purple;
+      font-size: 4rem;
+    }
+    img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+    }
+    
+  </style>
+
