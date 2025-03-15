@@ -1,9 +1,6 @@
 ---
-import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Logo from "../components/Logo.astro";
-
-// <title>{pageTitle}</title>
 
 //frontmatter
 ---
@@ -13,14 +10,12 @@ import Logo from "../components/Logo.astro";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- <title>{pageTitle}</title> -->
-		
 		
 	</head>
 	<body>
-		<Logo />
-		<Navigation />
-		<!-- <h1>{pageTitle}</h1> -->
+		
+		<Header />
+	
 		<slot />
 		
 		<Footer/>

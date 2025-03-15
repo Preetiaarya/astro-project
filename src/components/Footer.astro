@@ -1,19 +1,21 @@
-<!-- ---
-// frontmatter
+
 ---
-<footer>
-    <p>Quick Links</p>
-    <p>Contact Details</p>
-    <p>
-        <img src="/images/logos.png" alt="logos">
-    </p>
-</footer> -->
----
-const platform = "github";
-const username = "withastro";
+import Social from './Social.astro';
 ---
 
 <footer>
-  <p>Learn more about my projects on <a href={`https://www.${platform}.com/${username}`}>{platform}</a>!</p>
+  <!-- <p>Learn more about my projects on <a href={`https://www.${platform}.com/${username}`}>{platform}</a>!</p> -->
+
+  <Social platform="twitter" username="astrodotbuild" />
+  <Social platform="github" username="Preetiaarya" />
+  <Social platform="youtube" username="astrodotbuild" />
+
 </footer>
-<!-- https://github.com/Preetiaarya -->
+<style>
+    footer {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      background-color: rgba(111, 111, 102, 0.539);
+    }
+  </style>
