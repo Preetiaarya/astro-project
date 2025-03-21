@@ -1,4 +1,6 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro;
+
 title: 'My Second Blog post' 
 ---
 # Today's meeting discussion summary:
